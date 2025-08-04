@@ -6,6 +6,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../../constants";
+import {useEffect} from 'react';
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -13,6 +14,10 @@ const Upload = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusText, setStatusText] = useState('');
   const [file, setFile] = useState<File | null>(null);
+
+  useEffect(() => {
+    if(!auth.isAuthenticated) navigate('/auth?next=/upload');
+  }, [auth.isAuthenticated])
 
   const handleFileSelect = (file: File | null) => {
     setFile(file)

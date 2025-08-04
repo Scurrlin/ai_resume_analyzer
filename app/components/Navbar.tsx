@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { TrashIcon, UserIcon } from '@heroicons/react/24/outline'
+import { TrashIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
 const Navbar = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar = () => {
           <TrashIcon className="h-5 w-5" />
         </Link>
         <Link to="/auth" className="text-xl cursor-pointer">
-          <UserIcon className="h-5 w-5" />
+          <LockClosedIcon className="h-5 w-5" />
         </Link>
         <Link to="/upload" className="primary-button w-fit">
           Upload Resume

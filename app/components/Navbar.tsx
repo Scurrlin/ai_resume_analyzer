@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/">
-        <p className="text-xl font-bold text-gradient">RESUMIND</p>
+        <p className="text-xl font-bold text-black">RESUMIND</p>
       </Link>
       <div className="flex items-center gap-4">
         <Link to="/wipe" className="text-xl cursor-pointer">

@@ -1,4 +1,5 @@
-import {Link} from "react-router";
+import { Link } from "react-router";
+import { TrashIcon, UserIcon } from '@heroicons/react/24/outline'
 
 const Navbar = () => {
   return (
@@ -8,10 +9,10 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center gap-4">
         <Link to="/wipe" className="text-xl cursor-pointer">
-          🚮
+          <TrashIcon className="h-5 w-5" />
         </Link>
         <Link to="/auth" className="text-xl cursor-pointer">
-          🔐
+          <UserIcon className="h-5 w-5" />
         </Link>
         <Link to="/upload" className="primary-button w-fit">
           Upload Resume

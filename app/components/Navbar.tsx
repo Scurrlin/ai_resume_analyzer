@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="flex items-center gap-4">
         <Link to="/">
-          <p className="text-xl font-bold text-gradient">
+          <p className="text-xl font-bold text-black">
             <span className="sm:hidden">RM</span>
             <span className="hidden sm:inline">RESUMIND</span>
           </p>
